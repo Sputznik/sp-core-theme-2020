@@ -1,10 +1,15 @@
 <?php
 
-/* ENQUEUE STYLES AND SCRIPTS */
-add_action('wp_enqueue_scripts',function(){
-  wp_enqueue_style( 'main-css', get_template_directory_uri().'/assets/css/main.css', array(), time() );
-  wp_enqueue_script( 'main-js', get_template_directory_uri().'/assets/js/main.js', array( 'jquery' ), time(), true );
-});
+define('SPUTZNIK_2020_THEME_VERSION', time() );
+
+// INCLUDE THEME FILES
+$inc_files = array(
+  'lib/class-sp-theme.php'
+);
+
+foreach($inc_files as $inc_file){
+  require_once( $inc_file );
+}
 
 /** REGISTER NAV MENU */
 add_action( 'init', function(){

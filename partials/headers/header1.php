@@ -1,4 +1,11 @@
-<div class="navigation header1 sticky-solid">
+<?php
+  $bg_class = 'sticky-solid';
+  $is_sticky_page = get_post_meta( $post->ID, $key = 'sticky_transparent', true );
+
+  // HEADER CLASS BASED ON USER INPUT
+  if( $is_sticky_page ){ $bg_class = 'sticky-transparent'; }
+?>
+<div class="navigation header1 <?php _e( $bg_class );?>">
   <div class="nav-container">
     <div class="brand">
       <a href="#!">Logo</a>
