@@ -1,4 +1,4 @@
-<div class="navigation header1">
+<div class="navigation header1 sticky-solid">
   <div class="nav-container">
     <div class="brand">
       <a href="#!">Logo</a>
@@ -15,7 +15,7 @@
       			'theme_location'    => 'primary',
             'depth'             => 2,
             'container'         => 'div',
-      			'container_class'   => 'my_extra_menu_class',
+      			'container_class'   => 'nav-list-wrapper',
       			//'container_id'    => '',
       			'menu_class'        => 'nav-list',
           )

@@ -8,14 +8,6 @@ body{
 	background: #262626;
   width: 100%;
   position: relative;
-  transition: 500ms ease;
-}
-
-.navigation.sticky{
-  position: fixed;
-  top: 0px;
-  left: 0px;
-	z-index: 9999;
 }
 
 .nav-container {
@@ -63,8 +55,7 @@ body{
 	text-decoration: none;
 }
 
-.nav-container .navbar-nav ul li a:hover,
-.nav-container .navbar-nav ul li a:visited:hover {
+.nav-container .navbar-nav ul li a:hover{
 	background: #2581DC;
 	color: #ffffff;
 }
@@ -111,7 +102,7 @@ body{
 .nav-container #nav-toggle {
 	position: absolute;
 	left: 18px;
-	top: 22px;
+	top: 25px;
 	cursor: pointer;
 	padding: 10px 35px 16px 0px;
 }
@@ -121,7 +112,7 @@ body{
 .nav-container #nav-toggle span:after {
 	cursor: pointer;
 	border-radius: 1px;
-	height: 5px;
+	height: 4px;
 	width: 35px;
 	background: #ffffff;
 	position: absolute;
@@ -154,11 +145,38 @@ body{
 	transform: rotate(-45deg);
 }
 
+/* HEADER1 STYLES */
+.header1.sticky-solid,
+.header1.sticky-transparent,
+.header1.sticky-transparent.scrolled{ position: fixed; top: 0; z-index: 9999; }
+.header1.sticky-transparent{ transition: 500ms ease; background-color: transparent; }
+.header1.sticky-solid,
+.header1.sticky-transparent.scrolled{
+  background-color: #ffffff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+  border-bottom: 1px solid #e6e6e6;
+}
+.header1.sticky-solid .nav-container .navbar-nav ul li a,
+.header1.sticky-transparent.scrolled ul li a{ background-color: #ffffff; color: #000000; }
+.header1.sticky-transparent .navbar-nav ul li a{ background-color: transparent; }
+.header1.sticky-solid .nav-container .nav-mobile,
+.header1.sticky-transparent .nav-container .nav-mobile{ background: transparent; }
+.header1.sticky-solid .nav-container #nav-toggle span,
+.header1.sticky-solid .nav-container #nav-toggle span:before,
+.header1.sticky-solid .nav-container #nav-toggle span:after,
+.header1.sticky-transparent.scrolled .nav-container #nav-toggle span,
+.header1.sticky-transparent.scrolled .nav-container #nav-toggle span:before,
+.header1.sticky-transparent.scrolled .nav-container #nav-toggle span:after{ background: #000000; }
+.header1.sticky-solid .nav-container #nav-toggle.active span,
+.header1.sticky-transparent .nav-container #nav-toggle.active span { background-color: transparent; }
+/* HEADER1 STYLES */
+
+
 /* Page content  */
 #content {
 	max-width: 1000px;
 	margin: 0 auto;
-	padding: 10px;
+	/* padding: 10px; */
 }
 
 
@@ -169,7 +187,7 @@ body{
 
 	.nav-container .navbar-nav {
 		width: 100%;
-		padding: 70px 0 15px;
+		padding: 70px 0 0;
 	}
 
 	.nav-container .navbar-nav ul {
@@ -190,9 +208,14 @@ body{
 	}
 
 	/* .nav-dropdown { */
-  .nav-container .sub-menu{
-		position: static;
-	}
+  .nav-container .sub-menu{ position: static; }
+  .navigation .nav-list-wrapper{ background: #000000; }
+
+  /* HEADER1 STYLES */
+  .header1.sticky-solid .nav-container .navbar-nav ul li a,
+  .header1.sticky-transparent.scrolled ul li a { color: #ffffff; }
+  .header1.sticky-solid .nav-container .navbar-nav ul li a{ background: #000000; }
+  /* HEADER1 STYLES */
 }
 
 @media(min-width: 799px) {

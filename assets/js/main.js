@@ -21,5 +21,5 @@ jQuery(document).ready(function () {
 });
 
 jQuery(window).scroll(function() {
-  jQuery('.navigation.header1').toggleClass('sticky', jQuery(this).scrollTop() > 5);
+  jQuery('.navigation.header1').toggleClass('scrolled', jQuery(this).scrollTop() > 5);
 });
