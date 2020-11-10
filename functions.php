@@ -5,7 +5,9 @@ define('SPUTZNIK_2020_THEME_VERSION', time() );
 // INCLUDE THEME FILES
 $inc_files = array(
   'lib/class-sp-theme.php',
-  'lib/sp-gutenberg.php',
+  'lib/customize-theme/main.php',
+  'lib/sp-hooks/sp-hooks.php',
+  'lib/sp-gutenberg.php'
 );
 
 foreach($inc_files as $inc_file){
@@ -18,6 +20,7 @@ add_action( 'init', function(){
     'primary' 	=> __( 'Primary Menu', 'SPUTZNIK' )
   ) );
 });
+
 
 /* HIDE ADMIN BAR FROM THE FRONTEND */
 add_filter('show_admin_bar', '__return_false');

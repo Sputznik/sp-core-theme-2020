@@ -162,7 +162,13 @@ body{
 .header1.sticky-transparent.scrolled .nav-container #nav-toggle span:after{ background: #000000; }
 .header1.sticky-solid .nav-container #nav-toggle.active span,
 .header1.sticky-transparent .nav-container #nav-toggle.active span { background-color: transparent; }
+.header1.sticky-transparent .logo-normal { display: block; }
+.header1.sticky-transparent .logo-sticky { display: none; }
+.header1.sticky-transparent.scrolled .logo-normal { display: none; }
+.header1.sticky-transparent.scrolled .logo-sticky { display: block; }
 /* HEADER1 STYLES */
+
+.visible-xs { display: none!important; }
 
 
 /* Page content  */
@@ -216,4 +222,8 @@ body{
 	.nav-container .nav-list {
 		display: block !important;
 	}
+}
+@media (max-width: 767px){
+  .hidden-xs { display: none!important; }
+  .visible-xs { display: block!important; }
 }

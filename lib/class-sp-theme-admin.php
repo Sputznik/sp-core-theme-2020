@@ -4,6 +4,7 @@
 
 		var $meta_boxes;
 
+
 		function __construct(){
 
       add_action( 'init', array( $this, 'create') );			// THEME INITIALIZATION

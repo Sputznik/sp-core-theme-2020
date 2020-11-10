@@ -8,4 +8,4 @@
 		<?php wp_head();?>
 	</head>
 	<body <?php body_class(); ?>>
-		<?php require_once( get_template_directory().'/partials/headers/header1.php');?>
+		<?php do_action('sp_header');?>
